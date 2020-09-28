@@ -14,7 +14,7 @@ after_success:
   - docker build -t rchopde1/muilt-nginx ./nginx
   - docker build -t rchopde1/muilt-worker ./worker
   
-  - echo "$DOCKER_PASWORD" | docker login -u "$DOCKER_ID" --password_stdin
+  - echo "$DOCKER_PASWORD" | docker login -u "$DOCKER_ID" --password-stdin
   
   - docker push rchopde1/muilt-client
   - docker push rchopde1/muilt-server
